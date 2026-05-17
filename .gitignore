@@ -1,0 +1,18 @@
+node_modules/
+.DS_Store
+.env
+.env.local
+.env.*.local
+frontend/node_modules/
+frontend/dist/
+backend/node_modules/
+backend/data/
+
+# Do not redistribute dataset or API keys
+dataset.csv
+*.csv
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
