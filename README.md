@@ -41,7 +41,7 @@ cd frontend
 npm install
 npm run dev
 ```
-*The frontend will start on the local Vite server (usually `http://localhost:4173`).*
+*The frontend will start on the local Vite server  `http://localhost:4173`.*
 
 ---
 
@@ -51,7 +51,7 @@ npm run dev
 *   **Backend:** Node.js + Express
 *   **Frontend:** React + Vite + `@react-google-maps/api`
 
-### Architecture Trade-offs & Decisions (Given the 2-Hour Limit)
+### Architecture Trade-offs & Decisions 
 
 1.  **In-Memory Spatial Index vs. PostGIS Database**
     Setting up and seeding a full PostgreSQL database with the PostGIS extension would have consumed a significant portion of the time limit. Instead, I opted to stream the 134,000-row CSV into memory on server startup and use the `supercluster` library to build an **in-memory spatial index (KD-tree)**. This approach completely bypasses database latency and effortlessly handles bounding box queries in under 50 milliseconds, satisfying both the time constraint and the performance requirement.
