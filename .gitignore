@@ -6,11 +6,6 @@ node_modules/
 frontend/node_modules/
 frontend/dist/
 backend/node_modules/
-backend/data/
-
-# Do not redistribute dataset or API keys
-dataset.csv
-*.csv
 
 # Logs
 npm-debug.log*
